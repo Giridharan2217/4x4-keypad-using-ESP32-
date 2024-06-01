@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 38.4, "left": 360.04, "attrs": {} },
+    { "type": "wokwi-7segment", "id": "sevseg2", "top": 129.78, "left": 523.48, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -146, "left": -80.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:19", "sevseg2:G", "green", [ "h0" ] ],
+    [ "esp:18", "sevseg2:F", "green", [ "h48", "v-28.8", "h9.6" ] ],
+    [ "esp:5", "sevseg2:A", "green", [ "h38.4", "v-48", "h57.6" ] ],
+    [ "esp:3V3", "sevseg2:COM.2", "green", [ "h-19.05", "v-57.6", "h192", "v0", "h9.6" ] ],
+    [ "esp:17", "sevseg2:B", "green", [ "h28.8", "v-67.2", "h76.8" ] ],
+    [ "esp:16", "sevseg2:E", "green", [ "h57.6", "v48", "h9.6", "v-9.6" ] ],
+    [ "esp:4", "sevseg2:D", "green", [ "h48", "v48", "h28.8", "v-28.8" ] ],
+    [ "esp:0", "sevseg2:C", "green", [ "h38.4", "v57.6", "h57.6", "v-48" ] ],
+    [ "esp:2", "sevseg2:DP", "green", [ "h28.8", "v57.6", "h76.8" ] ],
+    [ "keypad1:R1", "esp:27", "green", [ "v38.4", "h297.6", "v-67.2" ] ],
+    [ "keypad1:R2", "esp:14", "green", [ "v57.6", "h297.2", "v-76.8" ] ],
+    [ "keypad1:R3", "esp:12", "green", [ "v67.2", "h297.3", "v-76.8" ] ],
+    [ "keypad1:R4", "esp:13", "green", [ "v86.4", "h297.4", "v-76.8" ] ],
+    [ "keypad1:C1", "esp:32", "green", [ "v28.8", "h239.9", "v-9.6" ] ],
+    [ "keypad1:C2", "esp:33", "green", [ "v19.2", "h220.8", "v-76.8" ] ],
+    [ "keypad1:C3", "esp:25", "green", [ "v9.6", "h201.45", "v-57.6" ] ],
+    [ "keypad1:C4", "esp:26", "green", [ "v0", "h182.1", "v-38.4" ] ]
+  ],
+  "dependencies": {}
+}
